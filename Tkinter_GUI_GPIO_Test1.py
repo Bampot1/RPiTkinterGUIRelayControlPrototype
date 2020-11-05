@@ -1,9 +1,23 @@
-#####################################################
-# Experimental GUI for switching relays on/off via
-# GPIO ports on Rpi 3 Model B
+###################################################################
+# Experimental primitive proto GUI for switching relays on/off via
+# GPIO ports on Rpi 3 Model B. The relay block used
+# had 8 relays and 8 input pins. This code creates a
+# Tkinter frame with 8 buttons which are bound to event
+# handler methods which toggle the GPIO pins LOW/HIGH
+# when clicked. The particular relay block being used
+# switched the relays on when the GPIO pins are set LOW.
+#
+# Testing Carried Out:
+# -------------------
+# Tested code on an Rpi 3 Model B using mouse to click the 
+# buttons and relays switched on and off successfully.Also tested
+# from a smart phone using VNC Viewer to click the buttons remotely
+# over Wifi connection and this also successfully switched the 
+# relays on and off.
+#
 #
 # Bampot1 3/10/2020
-####################################################
+##################################################################
 import RPi.GPIO as GPIO
 from Tkinter import *
 a=Tk()
